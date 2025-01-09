@@ -1,6 +1,7 @@
 plugins {
     id 'java'
     id 'maven-publish'
+    id 'java-gradle-plugin'
     id 'io.freefair.lombok' version "8.11"
 }
 
@@ -12,8 +13,18 @@ repositories {
 }
 
 dependencies {
+    implementation gradleApi()
     testImplementation platform('org.junit:junit-bom:5.10.0')
     testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+gradlePlugin {
+    plugins {
+        rconPlugin {
+            id = 'be.synnovation.rcon'
+            implementationClass = 'be.synnovation.rcon.gradle.RconPlugin'
+        }
+    }
 }
 
 def targetJavaVersion = 21
