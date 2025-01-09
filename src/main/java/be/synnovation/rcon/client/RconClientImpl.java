@@ -1,16 +1,14 @@
 package be.synnovation.rcon.client;
 
-import be.synnovation.rcon.service.RconPacketDecoder;
-import be.synnovation.rcon.service.RconPacketEncoder;
 import be.synnovation.rcon.enums.RconRequestType;
 import be.synnovation.rcon.exception.RconException;
 import be.synnovation.rcon.model.RconConnection;
 import be.synnovation.rcon.model.RconResponse;
-import lombok.extern.slf4j.Slf4j;
+import be.synnovation.rcon.service.RconPacketDecoder;
+import be.synnovation.rcon.service.RconPacketEncoder;
 
 import java.io.IOException;
 
-@Slf4j
 public class RconClientImpl implements RconClient {
 
     private final RconConnection connection;

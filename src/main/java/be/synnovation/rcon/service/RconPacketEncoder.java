@@ -1,7 +1,6 @@
 package be.synnovation.rcon.service;
 
 import be.synnovation.rcon.enums.RconRequestType;
-import lombok.extern.slf4j.Slf4j;
 
 import java.nio.ByteBuffer;
 import java.nio.charset.StandardCharsets;
@@ -9,13 +8,12 @@ import java.nio.charset.StandardCharsets;
 /**
  * Encodes commands or login requests into RCON packets (byte arrays).
  */
-@Slf4j
 public class RconPacketEncoder {
 
     /**
      * Creates an RCON packet and returns it as raw bytes.
      *
-     * @param data The command string or login password
+     * @param data        The command string or login password
      * @param requestType The type of request (LOGIN or COMMAND)
      * @return Encoded packet as a byte array
      */
